@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Bay Hotel &middot; Luxury by the Sea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- ===== Header / Nav ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">Azure&nbsp;Bay</a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#rooms" class="nav__link">Rooms</a></li>
+        <li><a href="#amenities" class="nav__link">Amenities</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow">Welcome to</p>
+      <h1 class="hero__title">Azure Bay Hotel</h1>
+      <p class="hero__subtitle">Where the ocean meets timeless luxury. Wake up to endless horizons and unforgettable comfort.</p>
+      <div class="hero__actions">
+        <a href="#rooms" class="btn btn--primary">Explore Rooms</a>
+        <a href="#contact" class="btn btn--ghost">Book a Stay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Booking bar ===== -->
+  <section class="booking container" aria-label="Quick availability check">
+    <form class="booking__form" id="booking-form">
+      <div class="booking__field">
+        <label for="checkin">Check&#8209;in</label>
+        <input type="date" id="checkin" required />
+      </div>
+      <div class="booking__field">
+        <label for="checkout">Check&#8209;out</label>
+        <input type="date" id="checkout" required />
+      </div>
+      <div class="booking__field">
+        <label for="guests">Guests</label>
+        <select id="guests">
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4+ Guests</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--primary booking__btn">Check Availability</button>
+    </form>
+    <p class="booking__msg" id="booking-msg" role="status"></p>
+  </section>
+
+  <!-- ===== Rooms ===== -->
+  <section class="section rooms" id="rooms">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">Stay with us</p>
+        <h2 class="section__title">Our Rooms &amp; Suites</h2>
+        <p class="section__lead">Thoughtfully designed spaces, each with a view worth waking up to.</p>
+      </header>
+
+      <div class="rooms__grid">
+        <article class="room-card reveal">
+          <div class="room-card__img room-card__img--1"></div>
+          <div class="room-card__body">
+            <span class="room-card__tag">Most popular</span>
+            <h3>Deluxe Ocean Room</h3>
+            <p>King bed, private balcony and floor-to-ceiling windows facing the bay.</p>
+            <div class="room-card__foot">
+              <span class="room-card__price">$220<small>/night</small></span>
+              <button class="btn btn--small book-btn" data-room="Deluxe Ocean Room">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card reveal">
+          <div class="room-card__img room-card__img--2"></div>
+          <div class="room-card__body">
+            <span class="room-card__tag">Family</span>
+            <h3>Garden Suite</h3>
+            <p>Two bedrooms opening onto a private garden terrace, perfect for families.</p>
+            <div class="room-card__foot">
+              <span class="room-card__price">$340<small>/night</small></span>
+              <button class="btn btn--small book-btn" data-room="Garden Suite">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card reveal">
+          <div class="room-card__img room-card__img--3"></div>
+          <div class="room-card__body">
+            <span class="room-card__tag">Signature</span>
+            <h3>Penthouse Bay View</h3>
+            <p>Top-floor sanctuary with panoramic terrace, plunge pool and butler service.</p>
+            <div class="room-card__foot">
+              <span class="room-card__price">$680<small>/night</small></span>
+              <button class="btn btn--small book-btn" data-room="Penthouse Bay View">Book</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Amenities ===== -->
+  <section class="section amenities" id="amenities">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">Everything you need</p>
+        <h2 class="section__title">Amenities</h2>
+      </header>
+
+      <div class="amenities__grid">
+        <div class="amenity reveal"><span class="amenity__icon">&#127946;</span><h3>Infinity Pool</h3><p>Heated rooftop pool overlooking the ocean.</p></div>
+        <div class="amenity reveal"><span class="amenity__icon">&#127869;</span><h3>Fine Dining</h3><p>Seasonal menus from our award-winning chefs.</p></div>
+        <div class="amenity reveal"><span class="amenity__icon">&#128692;</span><h3>Spa &amp; Wellness</h3><p>Massage, sauna and a full wellness suite.</p></div>
+        <div class="amenity reveal"><span class="amenity__icon">&#128663;</span><h3>Free Parking</h3><p>Secure on-site valet parking for all guests.</p></div>
+        <div class="amenity reveal"><span class="amenity__icon">&#128246;</span><h3>High-Speed Wi-Fi</h3><p>Complimentary fibre internet throughout.</p></div>
+        <div class="amenity reveal"><span class="amenity__icon">&#127870;</span><h3>24/7 Concierge</h3><p>We're here whenever you need us.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">A glimpse</p>
+        <h2 class="section__title">Gallery</h2>
+      </header>
+      <div class="gallery__grid">
+        <figure class="gallery__item gallery__item--1 reveal"></figure>
+        <figure class="gallery__item gallery__item--2 reveal"></figure>
+        <figure class="gallery__item gallery__item--3 reveal"></figure>
+        <figure class="gallery__item gallery__item--4 reveal"></figure>
+        <figure class="gallery__item gallery__item--5 reveal"></figure>
+        <figure class="gallery__item gallery__item--6 reveal"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info reveal">
+        <p class="section__eyebrow">Get in touch</p>
+        <h2 class="section__title">Book Your Escape</h2>
+        <p class="section__lead">Reserve your stay or ask us anything &mdash; our team replies within the hour.</p>
+        <ul class="contact__list">
+          <li><strong>Address</strong> 12 Harbour Promenade, Azure Bay</li>
+          <li><strong>Phone</strong> +1 (555) 018-2200</li>
+          <li><strong>Email</strong> stay@azurebay.example</li>
+        </ul>
+      </div>
+
+      <form class="contact__form reveal" id="contact-form">
+        <div class="field">
+          <input type="text" id="name" required placeholder=" " />
+          <label for="name">Full name</label>
+        </div>
+        <div class="field">
+          <input type="email" id="email" required placeholder=" " />
+          <label for="email">Email address</label>
+        </div>
+        <div class="field">
+          <textarea id="message" rows="4" required placeholder=" "></textarea>
+          <label for="message">Your message</label>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Request</button>
+        <p class="contact__msg" id="contact-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">Azure&nbsp;Bay</span>
+      <p>&copy; <span id="year"></span> Azure Bay Hotel. All rights reserved.</p>
+      <a href="#home" class="footer__top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- ===== Booking modal ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="modal__close" id="modal-close" aria-label="Close">&times;</button>
+      <h3 class="modal__title">Reserve <span id="modal-room">your room</span></h3>
+      <p class="modal__text">Thanks for your interest! This is a demo &mdash; in a real site this would start a secure booking flow.</p>
+      <button class="btn btn--primary" id="modal-ok">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    // ===== Azure Bay Hotel — interactivity =====
+    document.addEventListener("DOMContentLoaded", () => {
+      const header = document.getElementById("header");
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      const navLinks = document.querySelectorAll(".nav__link");
+
+      /* --- Sticky header style on scroll --- */
+      const onScroll = () => {
+        header.classList.toggle("scrolled", window.scrollY > 40);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+
+      /* --- Mobile menu toggle --- */
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+        navToggle.classList.toggle("open");
+      });
+      navLinks.forEach((link) =>
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("open");
+          navToggle.classList.remove("open");
+        })
+      );
+
+      /* --- Active link highlight via scroll spy --- */
+      const sections = [...document.querySelectorAll("section[id]")];
+      const spy = () => {
+        const y = window.scrollY + 120;
+        let current = sections[0]?.id;
+        for (const sec of sections) {
+          if (y >= sec.offsetTop) current = sec.id;
+        }
+        navLinks.forEach((l) =>
+          l.classList.toggle("active", l.getAttribute("href") === `#${current}`)
+        );
+      };
+      spy();
+      window.addEventListener("scroll", spy);
+
+      /* --- Reveal on scroll (IntersectionObserver) --- */
+      const reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add("visible"));
+      }
+
+      /* --- Booking availability form --- */
+      const bookingForm = document.getElementById("booking-form");
+      const bookingMsg = document.getElementById("booking-msg");
+      const checkin = document.getElementById("checkin");
+      const checkout = document.getElementById("checkout");
+
+      const today = new Date().toISOString().split("T")[0];
+      if (checkin) checkin.min = today;
+      if (checkout) checkout.min = today;
+      if (checkin) checkin.addEventListener("change", () => (checkout.min = checkin.value || today));
+
+      bookingForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!checkin.value || !checkout.value) {
+          bookingMsg.textContent = "Please choose both check-in and check-out dates.";
+          return;
+        }
+        if (new Date(checkout.value) <= new Date(checkin.value)) {
+          bookingMsg.textContent = "Check-out must be after check-in.";
+          return;
+        }
+        const nights = Math.round(
+          (new Date(checkout.value) - new Date(checkin.value)) / 86400000
+        );
+        const guests = document.getElementById("guests").value;
+        bookingMsg.textContent = `Great news — rooms available for ${nights} night${nights > 1 ? "s" : ""}, ${guests} guest(s)! Scroll to Rooms to book.`;
+      });
+
+      /* --- Booking modal for room "Book" buttons --- */
+      const modal = document.getElementById("modal");
+      const modalRoom = document.getElementById("modal-room");
+      const modalClose = document.getElementById("modal-close");
+      const modalOk = document.getElementById("modal-ok");
+
+      const openModal = (room) => {
+        modalRoom.textContent = room;
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+      };
+      const closeModal = () => {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+      };
+
+      document.querySelectorAll(".book-btn").forEach((btn) =>
+        btn.addEventListener("click", () => openModal(btn.dataset.room))
+      );
+      modalClose?.addEventListener("click", closeModal);
+      modalOk?.addEventListener("click", closeModal);
+      modal?.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      /* --- Contact form --- */
+      const contactForm = document.getElementById("contact-form");
+      const contactMsg = document.getElementById("contact-msg");
+      contactForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        contactMsg.textContent = "Thank you! Your request has been sent — we'll be in touch shortly.";
+        contactForm.reset();
+      });
+
+      /* --- Footer year --- */
+      const year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
