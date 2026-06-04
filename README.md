@@ -1,4 +1,4 @@
-# Azure Bay Hotel
+# Grand Raya Resort
 
 A simple, responsive single-page hotel website built with HTML and CSS, with a touch of vanilla JavaScript for interactivity.
 
